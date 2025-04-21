@@ -1,12 +1,11 @@
 import React from 'react';
 
-function Home(props) {
+function Register() {
     return (
         <div>
-
-          home
+            register
         </div>
     );
 }
 
-export default Home;
+export default Register;
