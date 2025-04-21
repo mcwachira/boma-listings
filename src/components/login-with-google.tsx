@@ -4,15 +4,13 @@ import React from 'react';
 import {Button} from "@/components/ui/button";
 import {GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '@/firebase/firebaseClient';
+import {useAuth} from "@/context/auth";
 
 function LoginWithGoogle() {
 
-    function signInWithGoogle() {
-        const provider = new GoogleAuthProvider();
-        signInWithPopup(auth, provider)
-    }
+    const auth  = useAuth()
     return (
-       <Button onClick={signInWithGoogle}>
+       <Button onClick={() => auth.loginInWithGoogle()}>
            Login with Google
        </Button>
     );
