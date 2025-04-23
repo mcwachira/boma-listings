@@ -1,8 +1,13 @@
 import React from 'react';
+import { Input } from '../ui/input';
 
 function NavSearch(props) {
     return (
-        <div></div>
+        <Input
+            type='search'
+            placeholder='find a property...'
+            className='max-w-xs dark:bg-muted '
+        />
     );
 }
 
