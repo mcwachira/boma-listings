@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="updated the readme">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="finished setting Logo component and Navbar">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +96,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745420631626</updated>
-      <workItem from="1745420636802" duration="2924000" />
+      <workItem from="1745420636802" duration="3997000" />
     </task>
     <task id="LOCAL-00001" summary="reinitialized the app again">
       <option name="closed" value="true" />
@@ -116,7 +114,23 @@
       <option name="project" value="LOCAL" />
       <updated>1745421879570</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="installed the necessary shadcnui components and set up the navbar and its components">
+      <option name="closed" value="true" />
+      <created>1745423759704</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745423759704</updated>
+    </task>
+    <task id="LOCAL-00004" summary="finished setting Logo component and Navbar">
+      <option name="closed" value="true" />
+      <created>1745424056501</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745424056501</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +139,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="reinitialized the app again" />
     <MESSAGE value="updated the readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated the readme" />
+    <MESSAGE value="installed the necessary shadcnui components and set up the navbar and its components" />
+    <MESSAGE value="finished setting Logo component and Navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished setting Logo component and Navbar" />
   </component>
 </project>
