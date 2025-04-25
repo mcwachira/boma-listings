@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="finished creating the server action for creating a profile">
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="created server action to fetch my whole profile from database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/UserIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/UserIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/profile/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/profile/create/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/profile/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/profile/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +107,7 @@
       <workItem from="1745420636802" duration="20787000" />
       <workItem from="1745591463617" duration="9880000" />
       <workItem from="1745602598471" duration="4501000" />
-      <workItem from="1745610757384" duration="899000" />
+      <workItem from="1745610757384" duration="3211000" />
     </task>
     <task id="LOCAL-00001" summary="reinitialized the app again">
       <option name="closed" value="true" />
@@ -195,7 +197,23 @@
       <option name="project" value="LOCAL" />
       <updated>1745606508084</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="finished creating the server action for fetching profile image and UserIcon component">
+      <option name="closed" value="true" />
+      <created>1745612556484</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1745612556484</updated>
+    </task>
+    <task id="LOCAL-00013" summary="created server action to fetch my whole profile from database">
+      <option name="closed" value="true" />
+      <created>1745613725520</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1745613725520</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +231,8 @@
     <MESSAGE value="Created reusable form components" />
     <MESSAGE value="installed prisma and setup prisma instance" />
     <MESSAGE value="finished creating the server action for creating a profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished creating the server action for creating a profile" />
+    <MESSAGE value="finished creating the server action for fetching profile image and UserIcon component" />
+    <MESSAGE value="created server action to fetch my whole profile from database" />
+    <option name="LAST_COMMIT_MESSAGE" value="created server action to fetch my whole profile from database" />
   </component>
 </project>
