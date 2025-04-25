@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from '../ui/button';
 import {LuTent} from "react-icons/lu";
 
-function Logo(props) {
+function Logo() {
     return (
         <Button size='icon' asChild>
             <Link href='/'>
