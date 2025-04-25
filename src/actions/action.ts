@@ -1,6 +1,6 @@
 "use server"
 
-import {profileSchema} from "@/utils/zod-schema";
+import {profileSchema, validateWithZodSchema} from "@/utils/zod-schema";
 import {Auth, clerkClient, currentUser} from "@clerk/nextjs/server";
 import prisma from "@/lib/prisma";
 import {redirect} from "next/navigation";
@@ -34,7 +34,7 @@ export const createProfileAction = async(prevState:any, formData:FormData) => {
         console.log(Object.keys(prisma));
 
         const rawData =Object.fromEntries(formData);
-        const validatedFields = profileSchema.parse(rawData);
+        const validatedFields = validateWithZodSchema(profileSchema, rawData);
 
         const users =     await prisma.profile.create({
             data: {
@@ -96,7 +96,8 @@ export const updateProfileAction = async(prevState:any, formData:FormData):Promi
     const user  = await getAuthUser();
     try{
         const rawData =Object.fromEntries(formData);
-        const validatedFields = profileSchema.parse(rawData);
+        const validatedFields = validateWithZodSchema(profileSchema, rawData);
+
 
         const updatedProfile = await prisma.profile.update({
             where:{
