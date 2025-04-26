@@ -1,7 +1,7 @@
 "use server"
 
-import {imageSchema, profileSchema, validateWithZodSchema} from "@/utils/zod-schema";
-import {Auth, clerkClient, currentUser} from "@clerk/nextjs/server";
+import {imageSchema, profileSchema, propertySchema, validateWithZodSchema} from "@/utils/schemas";
+import {auth, clerkClient, currentUser} from "@clerk/nextjs/server";
 import prisma from "@/lib/prisma";
 import {redirect} from "next/navigation";
 import {revalidatePath} from "next/cache";
@@ -10,11 +10,14 @@ import {uploadImage} from "@/utils/supabase";
 
 
 const getAuthUser = async () => {
+
     const user = await currentUser();
+    console.log("User:", user);
+    // const { userId } = await auth()
     if (!user) {
         throw new Error('You must be logged in to access this route');
     }
-    if (!user.privateMetadata.hasProfile) redirect('/profile/create');
+    if (!user?.privateMetadata.hasProfile) redirect('/profile/create');
     return user;
 };
 
@@ -55,7 +58,7 @@ export const createProfileAction = async(prevState:any, formData:FormData) => {
 
     }catch(error){
 
-renderError(error)
+return renderError(error)
     }
 
     redirect('/')
@@ -63,8 +66,8 @@ renderError(error)
 
 
 //fetch profile image
-export const fetchProfileIMage = async() => {
-    const user = await  currentUser();
+export const fetchProfileImage = async() => {
+    const user = await  getAuthUser()
     if(!user) return null ;
     const profile = await prisma.profile.findUnique({
         where:{
@@ -100,7 +103,7 @@ export const updateProfileAction = async(prevState:any, formData:FormData):Promi
         const validatedFields = validateWithZodSchema(profileSchema, rawData);
 
 
-        const updatedProfile = await prisma.profile.update({
+ await prisma.profile.update({
             where:{
                 clerkId:user.id
             },
@@ -112,7 +115,7 @@ export const updateProfileAction = async(prevState:any, formData:FormData):Promi
         return {message:'profile updated successfully'}
     }catch(error){
 
-        renderError(error)
+        return renderError(error)
     }
 
 }
@@ -136,7 +139,26 @@ await prisma.profile.update({
         revalidatePath('/profile');
 return {message:"profile updated successfully"}
     }catch(error){
-        renderError(error)
+        return renderError(error)
     }
 
+}
+
+
+export const createPropertyAction = async(prevState:any, formData:FormData):Promise<{message:string}> => {
+
+    const user = await getAuthUser();
+
+    try{
+
+        const rawData =Object.fromEntries(formData);
+        const validateFields = validateWithZodSchema(propertySchema, rawData);
+
+        return {message:"property created successfully"}
+
+    }catch(error){
+        return renderError(error)
+    }
+
+    // redirect('/')
 }
