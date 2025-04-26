@@ -164,7 +164,7 @@ export const createPropertyAction = async(prevState:any, formData:FormData):Prom
             }
         })
 
-        return {message:"property created successfully"}
+
 
     }catch(error){
         return renderError(error)
@@ -172,3 +172,4 @@ export const createPropertyAction = async(prevState:any, formData:FormData):Prom
 
     redirect('/')
 }
+
