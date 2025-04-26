@@ -1,10 +1,11 @@
 "use server"
 
-import {profileSchema, validateWithZodSchema} from "@/utils/zod-schema";
+import {imageSchema, profileSchema, validateWithZodSchema} from "@/utils/zod-schema";
 import {Auth, clerkClient, currentUser} from "@clerk/nextjs/server";
 import prisma from "@/lib/prisma";
 import {redirect} from "next/navigation";
 import {revalidatePath} from "next/cache";
+import {uploadImage} from "@/utils/supabase";
 
 
 
@@ -117,5 +118,25 @@ export const updateProfileAction = async(prevState:any, formData:FormData):Promi
 }
 
 export const updateProfileImageAction = async(prevState:any, formData:FormData):Promise<{message:string}> => {
-return {message:"profile image updated successffuly"}
+
+    const user = await getAuthUser();
+    try {
+        const image = formData.get("image") as File;
+        const validateFields = validateWithZodSchema(imageSchema, {image})
+        const fullPath = await uploadImage(validateFields.image);
+await prisma.profile.update({
+    where:{
+        clerkId:user.id,
+    },
+    data:{
+        profileImage:fullPath,
+    }
+})
+
+        revalidatePath('/profile');
+return {message:"profile updated successfully"}
+    }catch(error){
+        renderError(error)
+    }
+
 }
