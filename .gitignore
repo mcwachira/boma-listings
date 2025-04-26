@@ -44,3 +44,4 @@ next-env.d.ts
 # Prisma client
 /src/generated/prisma
 /node_modules/.prisma
+/.idea/compiler.xml
