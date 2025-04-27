@@ -173,3 +173,27 @@ export const createPropertyAction = async(prevState:any, formData:FormData):Prom
     redirect('/')
 }
 
+
+export const fetchProperties = async({search="", category}:{search?:string, category?:string}) => {
+
+    const properties = await prisma.property.findMany({
+        where:{
+            category,
+            OR:[
+                {name:{contains:search, mode:"insensitive"}},
+                {tagline:{contains:search, mode:"insensitive"}},
+            ]
+        },
+        select:{
+            id:true,
+            name:true,
+            tagline:true,
+            price:true,
+        },
+        orderBy:{
+            createdAt:"desc",
+        }
+    })
+
+    return properties;
+}
