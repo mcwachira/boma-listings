@@ -189,6 +189,8 @@ export const fetchProperties = async({search="", category}:{search?:string, cate
             name:true,
             tagline:true,
             price:true,
+            country:true,
+            image:true
         },
         orderBy:{
             createdAt:"desc",

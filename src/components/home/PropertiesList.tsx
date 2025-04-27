@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PropertiesList(props) {
+function PropertiesList() {
     return (
         <div></div>
     );
