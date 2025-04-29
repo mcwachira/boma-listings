@@ -172,30 +172,58 @@ export const createPropertyAction = async(prevState:any, formData:FormData):Prom
 
     redirect('/')
 }
-
-
-export const fetchProperties = async({search="", category}:{search?:string, category?:string}) => {
-
-    const properties = await prisma.property.findMany({
-        where:{
+export const fetchProperties = async ({
+                                          search = '',
+                                          category,
+                                      }: {
+    search?: string;
+    category?: string;
+}) => {
+    const properties = await db.property.findMany({
+        where: {
             category,
-            OR:[
-                {name:{contains:search, mode:"insensitive"}},
-                {tagline:{contains:search, mode:"insensitive"}},
-            ]
+            OR: [
+                { name: { contains: search, mode: 'insensitive' } },
+                { tagline: { contains: search, mode: 'insensitive' } },
+            ],
         },
-        select:{
-            id:true,
-            name:true,
-            tagline:true,
-            price:true,
-            country:true,
-            image:true
+        select: {
+            id: true,
+            name: true,
+            tagline: true,
+            country: true,
+            price: true,
+            image: true,
         },
-        orderBy:{
-            createdAt:"desc",
-        }
-    })
-
+        orderBy: {
+            createdAt: 'desc',
+        },
+    });
     return properties;
-}
+};
+
+// export const fetchProperties = async({search="", category}:{search?:string, category?:string}) => {
+//
+//     const properties = await prisma.property.findMany({
+//         where:{
+//             category,
+//             OR:[
+//                 {name:{contains:search, mode:"insensitive"}},
+//                 {tagline:{contains:search, mode:"insensitive"}},
+//             ]
+//         },
+//         select:{
+//             id:true,
+//             name:true,
+//             tagline:true,
+//             price:true,
+//             country:true,
+//             image:true
+//         },
+//         orderBy:{
+//             createdAt:"desc",
+//         }
+//     })
+//
+//     return properties;
+// }
