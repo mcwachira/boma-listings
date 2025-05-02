@@ -1,14 +1,10 @@
 import React from 'react';
-import {Label} from "@/components/ui/label";
-import {Input} from "@/components/ui/input";
-import { Button } from '@/components/ui/button';
-import SubmitButton from "@/components/form/Button";
+import SubmitButton from "@/components/form/Buttons";
 import FormContainer from "@/components/form/FormContainer";
 import FormInput from "@/components/form/FormInput";
-import { createProfileAction } from '@/actions/action';
+import {createProfileAction} from '@/actions/action';
 import {currentUser} from "@clerk/nextjs/server";
 import {redirect} from "next/navigation";
-
 
 
 const CreateProfilePage = async () => {

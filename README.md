@@ -5738,14 +5738,14 @@ import { Skeleton } from '@/components/ui/skeleton';
 export function StatsLoadingContainer() {
   return (
     <div className='mt-8 grid md:grid-cols-2 gap-4 lg:grid-cols-3'>
-      <LoadingCard />
-      <LoadingCard />
-      <LoadingCard />
+      <LoadingCards />
+      <LoadingCards />
+      <LoadingCards />
     </div>
   );
 }
 
-function LoadingCard() {
+function LoadingCards() {
   return (
     <Card>
       <CardHeader>
