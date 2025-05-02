@@ -1,12 +1,11 @@
 "use server"
 
 import {imageSchema, profileSchema, propertySchema, validateWithZodSchema} from "@/utils/schemas";
-import {auth, clerkClient, currentUser} from "@clerk/nextjs/server";
+import {clerkClient, currentUser} from "@clerk/nextjs/server";
 import prisma from "@/lib/prisma";
 import {redirect} from "next/navigation";
 import {revalidatePath} from "next/cache";
 import {uploadImage} from "@/utils/supabase";
-
 
 
 const getAuthUser = async () => {
@@ -179,7 +178,7 @@ export const fetchProperties = async ({
     search?: string;
     category?: string;
 }) => {
-    const properties = await db.property.findMany({
+    const properties = await prisma.property.findMany({
         where: {
             category,
             OR: [
