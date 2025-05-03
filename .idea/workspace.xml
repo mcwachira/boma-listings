@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Finished Creating the search functionality">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/profile/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/profile/create/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/profile/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/profile/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/rentals/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/rentals/create/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/PropertyRating.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/PropertyRating.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/Buttons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Buttons.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/ImageInputContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/ImageInputContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/PropertiesContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/PropertiesContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/PropertiesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/PropertiesList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/countries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/countries.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/UserIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/UserIcon.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +120,9 @@
       <workItem from="1745986210512" duration="618000" />
       <workItem from="1746086426932" duration="613000" />
       <workItem from="1746096737037" duration="3119000" />
+      <workItem from="1746216213182" duration="49000" />
+      <workItem from="1746219435406" duration="6962000" />
+      <workItem from="1746253045269" duration="13144000" />
     </task>
     <task id="LOCAL-00001" summary="reinitialized the app again">
       <option name="closed" value="true" />
@@ -457,5 +451,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="Finished Creating the search functionality" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/navbar/UserIcon.tsx</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

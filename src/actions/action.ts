@@ -11,7 +11,7 @@ import {uploadImage} from "@/utils/supabase";
 const getAuthUser = async () => {
 
     const user = await currentUser();
-    console.log("User:", user);
+    // console.log("User:", user);
     // const { userId } = await auth()
     if (!user) {
         throw new Error('You must be logged in to access this route');
@@ -34,7 +34,7 @@ export const createProfileAction = async(prevState:any, formData:FormData) => {
         const user = await  currentUser();
         if(!user) throw new Error('Please login to create user');
         // console.log(user)
-        console.log(Object.keys(prisma));
+        // console.log(Object.keys(prisma));
 
         const rawData =Object.fromEntries(formData);
         const validatedFields = validateWithZodSchema(profileSchema, rawData);
@@ -66,7 +66,7 @@ return renderError(error)
 
 //fetch profile image
 export const fetchProfileImage = async() => {
-    const user = await  getAuthUser()
+    const user = await currentUser();
     if(!user) return null ;
     const profile = await prisma.profile.findUnique({
         where:{
@@ -201,28 +201,55 @@ export const fetchProperties = async ({
     return properties;
 };
 
-// export const fetchProperties = async({search="", category}:{search?:string, category?:string}) => {
-//
-//     const properties = await prisma.property.findMany({
-//         where:{
-//             category,
-//             OR:[
-//                 {name:{contains:search, mode:"insensitive"}},
-//                 {tagline:{contains:search, mode:"insensitive"}},
-//             ]
-//         },
-//         select:{
-//             id:true,
-//             name:true,
-//             tagline:true,
-//             price:true,
-//             country:true,
-//             image:true
-//         },
-//         orderBy:{
-//             createdAt:"desc",
-//         }
-//     })
-//
-//     return properties;
-// }
+export const fetchFavoriteId = async({
+    propertyId
+}:{
+    propertyId:string;
+}) => {
+    const user = await getAuthUser()
+    const favorite = await prisma.favorite.findFirst({
+        where:{
+            propertyId,
+            profileId:user.id
+        },
+        select:{
+            id:true,
+        }
+    });
+    console.log(favorite);
+    return favorite?.id || null;
+}
+
+export const toggleFavoriteAction = async(prevState:{
+    propertyId:string,
+    favoriteId:string |null,
+    pathname:string
+}) => {
+
+    const user = await getAuthUser();
+    const {propertyId, favoriteId, pathname} = prevState;
+
+
+    try{
+        console.log(favoriteId, pathname, propertyId);
+        //if favoriteId exist remove from db else add
+        if(favoriteId){
+            await prisma.favorite.delete({
+                where:{
+                    id:favoriteId
+                }
+            })
+        }else {
+           await prisma.favorite.create({
+                data:{
+                    propertyId,
+                    profileId:user.id
+                }
+            })
+        }
+ revalidatePath(pathname)
+        return {message:favoriteId ? "Removed from Faves" : "Added to faves"};
+    }catch(error){
+        return renderError(error)
+    }
+}

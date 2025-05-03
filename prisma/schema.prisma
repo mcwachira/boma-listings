@@ -25,7 +25,7 @@ model Profile {
   profileImage String
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
-  Property     Property[]
+  properties   Property[]
   favorites    Favorite[]
 }
 

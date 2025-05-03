@@ -12,13 +12,13 @@ function HomePage({
     return (
         <section>
             <CategoriesList
-                category={searchParams.category}
-                search={searchParams.search}
+                category={searchParams?.category}
+                search={searchParams?.search}
             />
             <Suspense fallback={<LoadingCards />}>
                 <PropertiesContainer
-                    category={searchParams.category}
-                    search={searchParams.search}
+                    category={searchParams?.category}
+                    search={searchParams?.search}
                 />
             </Suspense>
         </section>

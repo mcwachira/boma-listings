@@ -5,7 +5,7 @@ import {Button} from "@/components/ui/button";
 import {ReloadIcon} from '@radix-ui/react-icons';
 import {useFormStatus} from 'react-dom';
 import {SignInButton} from "@clerk/nextjs";
-import {FaRegHeart} from 'react-icons/fa';
+import {FaHeart, FaRegHeart} from 'react-icons/fa';
 
 type  btnSize = 'default' | 'lg' | 'sm';
 type SubmitButtonProps = {
@@ -44,4 +44,21 @@ export const CardSignInButton = () => {
             </Button>
         </SignInButton>
     )
+}
+
+export const CardSubmitButton = ({isFavorite}:{isFavorite:boolean}) => {
+     const {pending } = useFormStatus();
+     return(
+         <Button
+         type="submit"
+         size="icon"
+         variant="outline"
+         className="p-2 cursor-pointer"
+         >
+             {pending ? (
+                 <ReloadIcon className='mr-2 h-4 w-4 animate-spin' />
+             ):isFavorite ?(<FaHeart/>):(<FaRegHeart/>
+             )}
+         </Button>
+     )
 }
