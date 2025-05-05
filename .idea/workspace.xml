@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Setup the Property Details page and Property Details Component">
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Setup the Amenities, Descriptions and Title Components">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/properties/BookingCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/properties/BookingCalendar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +123,7 @@
       <workItem from="1746421818375" duration="3156000" />
       <workItem from="1746429044763" duration="1006000" />
       <workItem from="1746430601110" duration="11210000" />
-      <workItem from="1746463090804" duration="3336000" />
+      <workItem from="1746463090804" duration="5662000" />
     </task>
     <task id="LOCAL-00001" summary="reinitialized the app again">
       <option name="closed" value="true" />
@@ -469,7 +469,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746436143810</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Setup the UserInfo Component">
+      <option name="closed" value="true" />
+      <created>1746466602898</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1746466602898</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Setup the Amenities, Descriptions and Title Components">
+      <option name="closed" value="true" />
+      <created>1746466631242</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1746466631242</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,8 +504,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Created UpdatedProfile Image action function to upload images to my storage bucket" />
-    <MESSAGE value="finished creating the categories" />
     <MESSAGE value="finished creating the categoriesInput component, the Price input component and text area input component" />
     <MESSAGE value="created types for categories" />
     <MESSAGE value="fixed issue with mu site. returning the error made the site work" />
@@ -513,7 +527,9 @@
     <MESSAGE value="Created action to fetch the property details." />
     <MESSAGE value="Setup the Calendar Component and Image Container Component" />
     <MESSAGE value="Setup the Property Details page and Property Details Component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup the Property Details page and Property Details Component" />
+    <MESSAGE value="Setup the UserInfo Component" />
+    <MESSAGE value="Setup the Amenities, Descriptions and Title Components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup the Amenities, Descriptions and Title Components" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -526,7 +542,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/properties/[id]/page.tsx</url>
-          <line>15</line>
+          <line>27</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

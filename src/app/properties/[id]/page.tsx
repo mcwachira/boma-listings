@@ -12,7 +12,16 @@ import UserInfo from "@/components/properties/UserInfo";
 import {Separator} from "@/components/ui/separator";
 import Description from "@/components/properties/Description";
 import Amenities from "@/components/properties/Amenities";
+import DynamicMapComponent from "@/app/properties/[id]/DynamicMapComponent";
 
+
+// const DynamicMap = dynamic(
+//     () => import('@/components/properties/PropertyMap'),
+//     {
+//         ssr: false,
+//         loading: () => <Skeleton className='h-[400px] w-full' />,
+//     }
+// );
 async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     const property = await fetchPropertyDetails(params.id);
     if(!property) {
@@ -51,6 +60,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
                     <Separator className="mt-4"/>
                     <Description description={property.description}/>
                     <Amenities amenities={property.amenities}/>
+                    <DynamicMapComponent countryCode={property.country}/>
                 </div>
 
                 <div className='lg:col-span-4 flex flex-col items-center'>
