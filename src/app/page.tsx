@@ -1,20 +1,19 @@
 import CategoriesList from "@/components/home/CategoriesList";
-
 import PropertiesContainer from "@/components/home/PropertiesContainer";
 import {Suspense} from "react";
 import LoadingCards from "@/components/card/LoadingCards";
 
-type PageProps =    Promise<{
+// Define the props correctly (no Promise needed)
+interface PageProps {
     searchParams?: {
         category?: string;
         search?: string;
     };
-}>
-async function HomePage({
-                      searchParams,
-                  }: PageProps)  {
+}
 
-    const {category, search} = await searchParams;
+async function HomePage({ searchParams }: PageProps) {
+    const { category, search } = searchParams || {};
+
     return (
         <section>
             <CategoriesList
@@ -30,4 +29,5 @@ async function HomePage({
         </section>
     );
 }
+
 export default HomePage;
