@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Fixed issues with page props in my Property Details Page" />
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Fixed issues with Reviews Page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/calendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/calendar.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,23 +123,7 @@
       <workItem from="1746421818375" duration="3156000" />
       <workItem from="1746429044763" duration="1006000" />
       <workItem from="1746430601110" duration="11210000" />
-      <workItem from="1746463090804" duration="9289000" />
-    </task>
-    <task id="LOCAL-00005" summary="updated my css theme and added dark mode to the app">
-      <option name="closed" value="true" />
-      <created>1745424908668</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1745424908668</updated>
-    </task>
-    <task id="LOCAL-00006" summary="finished setting up the LinksDrop component">
-      <option name="closed" value="true" />
-      <created>1745426431466</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1745426431466</updated>
+      <workItem from="1746463090804" duration="10180000" />
     </task>
     <task id="LOCAL-00007" summary="Setup auth with clerk">
       <option name="closed" value="true" />
@@ -512,7 +501,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746472504674</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Fixed issues with Rental Page">
+      <option name="closed" value="true" />
+      <created>1746472682270</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1746472682270</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Fixed issues with Reviews Page">
+      <option name="closed" value="true" />
+      <created>1746472901026</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1746472901027</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,8 +536,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="finished creating Create Property action" />
-    <MESSAGE value="updated Create Property action" />
     <MESSAGE value="created action to fetch all my properties" />
     <MESSAGE value="Finished creating the Categories List Component" />
     <MESSAGE value="Finished creating the Empty List and Property List Components" />
@@ -556,7 +559,9 @@
     <MESSAGE value="Made changes to Home page" />
     <MESSAGE value="Fixed issues with page props" />
     <MESSAGE value="Fixed issues with page props in my Property Details Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with page props in my Property Details Page" />
+    <MESSAGE value="Fixed issues with Rental Page" />
+    <MESSAGE value="Fixed issues with Reviews Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with Reviews Page" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
