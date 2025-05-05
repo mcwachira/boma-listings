@@ -67,6 +67,8 @@ return renderError(error)
 //fetch profile image
 export const fetchProfileImage = async() => {
     const user = await currentUser();
+    console.log(user)
+    // const user  = await getAuthUser();
     if(!user) return null ;
     const profile = await prisma.profile.findUnique({
         where:{

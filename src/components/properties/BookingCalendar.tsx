@@ -13,8 +13,15 @@ function BookingCalendar() {
     };
     const [range, setRange] = useState<DateRange | undefined>(defaultSelected);
     
+
     return (
-       <Calendar mode="range" defaultMonth={currentDate} selected={range} onSelect={setRange}/>
+        <Calendar
+            id='test'
+            mode='range'
+            defaultMonth={currentDate}
+            selected={range}
+            onSelect={setRange}
+        />
     );
 }
 

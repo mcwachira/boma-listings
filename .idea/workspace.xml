@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Setup the Calendar Component and Image Container Component">
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Setup the Property Details page and Property Details Component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/properties/BookingCalendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/properties/BookingCalendar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +122,8 @@
       <workItem from="1746278903625" duration="809000" />
       <workItem from="1746421818375" duration="3156000" />
       <workItem from="1746429044763" duration="1006000" />
-      <workItem from="1746430601110" duration="4634000" />
+      <workItem from="1746430601110" duration="11210000" />
+      <workItem from="1746463090804" duration="3336000" />
     </task>
     <task id="LOCAL-00001" summary="reinitialized the app again">
       <option name="closed" value="true" />
@@ -458,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746435533571</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Setup the Property Details page and Property Details Component">
+      <option name="closed" value="true" />
+      <created>1746436143810</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1746436143810</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +488,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Created Supabase function to help in uploading images" />
     <MESSAGE value="Created UpdatedProfile Image action function to upload images to my storage bucket" />
     <MESSAGE value="finished creating the categories" />
     <MESSAGE value="finished creating the categoriesInput component, the Price input component and text area input component" />
@@ -502,7 +512,8 @@
     <MESSAGE value="Created the ShareButton Component and BredCrumbs component." />
     <MESSAGE value="Created action to fetch the property details." />
     <MESSAGE value="Setup the Calendar Component and Image Container Component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup the Calendar Component and Image Container Component" />
+    <MESSAGE value="Setup the Property Details page and Property Details Component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup the Property Details page and Property Details Component" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -515,7 +526,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/properties/[id]/page.tsx</url>
-          <line>11</line>
+          <line>15</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
