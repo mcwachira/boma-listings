@@ -21,6 +21,7 @@ function BookingCalendar() {
             defaultMonth={currentDate}
             selected={range}
             onSelect={setRange}
+            disabled={{ before: new Date() }}
         />
     );
 }
