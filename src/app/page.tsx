@@ -4,11 +4,15 @@ import PropertiesContainer from "@/components/home/PropertiesContainer";
 import {Suspense} from "react";
 import LoadingCards from "@/components/card/LoadingCards";
 
+type PageProps = {
+    searchParams?: {
+        category?: string;
+        search?: string;
+    };
+};
 function HomePage({
                       searchParams,
-                  }: {
-    searchParams: { category?: string; search?: string };
-}) {
+                  }: PageProps)  {
     return (
         <section>
             <CategoriesList
