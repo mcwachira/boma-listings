@@ -22,8 +22,10 @@ import DynamicMapComponent from "@/app/properties/[id]/DynamicMapComponent";
 //         loading: () => <Skeleton className='h-[400px] w-full' />,
 //     }
 // );
-async function PropertyDetailsPage({ params }: { params: { id: string } }) {
-    const property = await fetchPropertyDetails(params.id);
+type Params = Promise<{ id: string }>
+async function PropertyDetailsPage({ params }: { params: Params }) {
+    const { id } = await params
+    const property = await fetchPropertyDetails(id);
     if(!property) {
         redirect("/")
     }
