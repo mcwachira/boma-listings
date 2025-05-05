@@ -1,8 +1,6 @@
-import { Prisma } from "@/generated/prisma/client";
 import {Label} from "@/components/ui/label";
 import {categories} from "@/utils/categories";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-
 
 
 // const name = Prisma.PropertyScalarFieldEnum.category

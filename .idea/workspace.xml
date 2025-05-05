@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Fixed issues with Reviews Page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/calendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/calendar.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="downgraded my react-day-picker package to make calendar component to work" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,23 +118,7 @@
       <workItem from="1746421818375" duration="3156000" />
       <workItem from="1746429044763" duration="1006000" />
       <workItem from="1746430601110" duration="11210000" />
-      <workItem from="1746463090804" duration="10180000" />
-    </task>
-    <task id="LOCAL-00007" summary="Setup auth with clerk">
-      <option name="closed" value="true" />
-      <created>1745436986169</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1745436986169</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Finished Creating the links drop down component">
-      <option name="closed" value="true" />
-      <created>1745438147328</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1745438147328</updated>
+      <workItem from="1746463090804" duration="10656000" />
     </task>
     <task id="LOCAL-00009" summary="Created reusable form components">
       <option name="closed" value="true" />
@@ -517,7 +496,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746472901027</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="donwgraded my react-day-picker package to make calendar component to work">
+      <option name="closed" value="true" />
+      <created>1746473488531</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1746473488531</updated>
+    </task>
+    <task id="LOCAL-00057" summary="downgraded my react-day-picker package to make calendar component to work">
+      <option name="closed" value="true" />
+      <created>1746473824911</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1746473824911</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,8 +531,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="created action to fetch all my properties" />
-    <MESSAGE value="Finished creating the Categories List Component" />
     <MESSAGE value="Finished creating the Empty List and Property List Components" />
     <MESSAGE value="Created format.ts helper function to help with formating of currency" />
     <MESSAGE value="Finished Creating the property rating component" />
@@ -561,7 +554,9 @@
     <MESSAGE value="Fixed issues with page props in my Property Details Page" />
     <MESSAGE value="Fixed issues with Rental Page" />
     <MESSAGE value="Fixed issues with Reviews Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with Reviews Page" />
+    <MESSAGE value="donwgraded my react-day-picker package to make calendar component to work" />
+    <MESSAGE value="downgraded my react-day-picker package to make calendar component to work" />
+    <option name="LAST_COMMIT_MESSAGE" value="downgraded my react-day-picker package to make calendar component to work" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
