@@ -23,7 +23,7 @@ function PropertyMap({countryCode}:{countryCode: string}) {
               <CountryFlagAndName countryCode={countryCode}/>
           </div>
 
-          <MapContainer scrollWheelZoom={false} zoomControl={false} className="h-[150vh] rounded-lg z-0"
+          <MapContainer scrollWheelZoom={false} zoomControl={false} className="h-[50vh] rounded-lg z-0"
                         center={location || defaultLocation}
                         zoom={7}>
               <TileLayer
