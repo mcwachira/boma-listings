@@ -15,13 +15,6 @@ import Amenities from "@/components/properties/Amenities";
 import DynamicMapComponent from "@/app/properties/[id]/DynamicMapComponent";
 
 
-// const DynamicMap = dynamic(
-//     () => import('@/components/properties/PropertyMap'),
-//     {
-//         ssr: false,
-//         loading: () => <Skeleton className='h-[400px] w-full' />,
-//     }
-// );
 type Params = Promise<{ id: string }>
 async function PropertyDetailsPage({ params }: { params: Params }) {
     const { id } = await params
