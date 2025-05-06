@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Fixed issues with my calendar plus disabled dates which are not current">
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Finished creating the ReviewCard Component, the Rating Component and Comment Component">
+      <change afterPath="$PROJECT_DIR$/src/components/reviews/Comment.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/rentals/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/rentals/create/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/TextArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/TextAreaInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/schemas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/schemas.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reviews/Component.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reviews/PropertyReviews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reviews/PropertyReviews.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reviews/Rating.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reviews/Rating.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reviews/ReviewCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reviews/ReviewCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,39 +128,7 @@
       <workItem from="1746429044763" duration="1006000" />
       <workItem from="1746430601110" duration="11210000" />
       <workItem from="1746463090804" duration="10656000" />
-      <workItem from="1746552630728" duration="2808000" />
-    </task>
-    <task id="LOCAL-00021" summary="finished creating the categoriesInput component, the Price input component and text area input component">
-      <option name="closed" value="true" />
-      <created>1745651721785</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1745651721785</updated>
-    </task>
-    <task id="LOCAL-00022" summary="created types for categories">
-      <option name="closed" value="true" />
-      <created>1745651741626</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1745651741626</updated>
-    </task>
-    <task id="LOCAL-00023" summary="fixed issue with mu site. returning the error made the site work">
-      <option name="closed" value="true" />
-      <created>1745658741299</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1745658741299</updated>
-    </task>
-    <task id="LOCAL-00024" summary="finished creating the amenities types country types">
-      <option name="closed" value="true" />
-      <created>1745667664201</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1745667664201</updated>
+      <workItem from="1746552630728" duration="6229000" />
     </task>
     <task id="LOCAL-00025" summary="finished creating the  Components needed for the Rental page and the rental page itself">
       <option name="closed" value="true" />
@@ -522,7 +490,39 @@
       <option name="project" value="LOCAL" />
       <updated>1746483548042</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Created Components for Review component">
+      <option name="closed" value="true" />
+      <created>1746555561941</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1746555561942</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Created Server action to enable creation of reviews">
+      <option name="closed" value="true" />
+      <created>1746555609416</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1746555609416</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Updated TextAreaInput Component to enable my  create reveiw action to work">
+      <option name="closed" value="true" />
+      <created>1746555666450</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1746555666450</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Created a server action to fetch all my comments from the db">
+      <option name="closed" value="true" />
+      <created>1746558829254</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1746558829254</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,11 +541,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Created action to fetch the property details." />
-    <MESSAGE value="Setup the Calendar Component and Image Container Component" />
-    <MESSAGE value="Setup the Property Details page and Property Details Component" />
-    <MESSAGE value="Setup the UserInfo Component" />
-    <MESSAGE value="Setup the Amenities, Descriptions and Title Components" />
     <MESSAGE value="Setup a PropertyMap Component" />
     <MESSAGE value="Made changes to the build command for deployment" />
     <MESSAGE value="Made changes to Home page" />
@@ -566,7 +561,12 @@
     <MESSAGE value="Imported my DynamicNavSearch Component to fix issues with my site building" />
     <MESSAGE value="updated my react-day-picker package" />
     <MESSAGE value="Fixed issues with my calendar plus disabled dates which are not current" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with my calendar plus disabled dates which are not current" />
+    <MESSAGE value="Created Components for Review component" />
+    <MESSAGE value="Created Server action to enable creation of reviews" />
+    <MESSAGE value="Updated TextAreaInput Component to enable my  create reveiw action to work" />
+    <MESSAGE value="Created a server action to fetch all my comments from the db" />
+    <MESSAGE value="Finished creating the ReviewCard Component, the Rating Component and Comment Component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished creating the ReviewCard Component, the Rating Component and Comment Component" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -579,7 +579,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/properties/[id]/page.tsx</url>
-          <line>19</line>
+          <line>20</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

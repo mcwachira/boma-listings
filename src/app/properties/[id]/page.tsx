@@ -14,6 +14,7 @@ import Description from "@/components/properties/Description";
 import Amenities from "@/components/properties/Amenities";
 import DynamicMapComponent from "@/app/properties/[id]/DynamicMapComponent";
 import SubmitReview from "@/components/reviews/SubmitReview";
+import PropertyReviews from '@/components/reviews/PropertyReviews';
 
 
 type Params = Promise<{ id: string }>
@@ -64,7 +65,8 @@ async function PropertyDetailsPage({ params }: { params: Params }) {
                     <BookingCalendar />
                 </div>
             </section>
-            <SubmitReview propertyId={property.id} />;
+            <SubmitReview propertyId={property.id} />
+            <PropertyReviews propertyId={property.id}/>
         </section>
     );
 }

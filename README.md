@@ -474,7 +474,7 @@ export const config = {
 - customization
     - avatars
 
-### Toast Component
+### Toast Comment
 
 [Toast](https://ui.shadcn.com/docs/components/toast)
 
@@ -3680,7 +3680,7 @@ Server Side Rendering (SSR) Control: By default, Next.js pre-renders every page.
   },
 ```
 
-- refactor NavSearch Component
+- refactor NavSearch Comment
 
 ### Review Model
 
@@ -3795,7 +3795,7 @@ const RatingInput = ({
 export default RatingInput;
 ```
 
-### SubmitReview Component
+### SubmitReview Comment
 
 - app/properties/[id]
 
@@ -3961,7 +3961,7 @@ async function PropertyReviews({ propertyId }: { propertyId: string }) {
 export default PropertyReviews;
 ```
 
-### ReviewCard Component
+### ReviewCard Comment
 
 ```tsx
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -5926,7 +5926,7 @@ export default ChartsContainer;
 npm install recharts
 ```
 
-### Admin User - Chart Component
+### Admin User - Chart Comment
 
 ```tsx
 'use client';
