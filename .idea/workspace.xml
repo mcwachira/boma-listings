@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="downgraded my react-day-picker package to make calendar component to work" />
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Fixed issues with my calendar plus disabled dates which are not current">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/rentals/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/rentals/create/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/TextArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/TextAreaInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/schemas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/schemas.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,102 +128,7 @@
       <workItem from="1746429044763" duration="1006000" />
       <workItem from="1746430601110" duration="11210000" />
       <workItem from="1746463090804" duration="10656000" />
-    </task>
-    <task id="LOCAL-00009" summary="Created reusable form components">
-      <option name="closed" value="true" />
-      <created>1745463622621</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1745463622621</updated>
-    </task>
-    <task id="LOCAL-00010" summary="installed prisma and setup prisma instance">
-      <option name="closed" value="true" />
-      <created>1745596476557</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1745596476557</updated>
-    </task>
-    <task id="LOCAL-00011" summary="finished creating the server action for creating a profile">
-      <option name="closed" value="true" />
-      <created>1745606508084</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1745606508084</updated>
-    </task>
-    <task id="LOCAL-00012" summary="finished creating the server action for fetching profile image and UserIcon component">
-      <option name="closed" value="true" />
-      <created>1745612556484</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1745612556484</updated>
-    </task>
-    <task id="LOCAL-00013" summary="created server action to fetch my whole profile from database">
-      <option name="closed" value="true" />
-      <created>1745613725520</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1745613725520</updated>
-    </task>
-    <task id="LOCAL-00014" summary="created server action to fetch update the profile">
-      <option name="closed" value="true" />
-      <created>1745614764911</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1745614764912</updated>
-    </task>
-    <task id="LOCAL-00015" summary="finished creating the profile page">
-      <option name="closed" value="true" />
-      <created>1745614797814</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1745614797814</updated>
-    </task>
-    <task id="LOCAL-00016" summary="created helper function to validate my schema">
-      <option name="closed" value="true" />
-      <created>1745616421319</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1745616421319</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Created the Image Input Component and Image Input Container Component">
-      <option name="closed" value="true" />
-      <created>1745619249675</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1745619249675</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Created Supabase function to help in uploading images">
-      <option name="closed" value="true" />
-      <created>1745639802510</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1745639802510</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Created UpdatedProfile Image action function to upload images to my storage bucket">
-      <option name="closed" value="true" />
-      <created>1745639867191</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1745639867191</updated>
-    </task>
-    <task id="LOCAL-00020" summary="finished creating the categories">
-      <option name="closed" value="true" />
-      <created>1745651667796</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1745651667796</updated>
+      <workItem from="1746552630728" duration="2808000" />
     </task>
     <task id="LOCAL-00021" summary="finished creating the categoriesInput component, the Price input component and text area input component">
       <option name="closed" value="true" />
@@ -512,7 +426,103 @@
       <option name="project" value="LOCAL" />
       <updated>1746473824911</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="updated CategoriesInput component">
+      <option name="closed" value="true" />
+      <created>1746474311120</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1746474311121</updated>
+    </task>
+    <task id="LOCAL-00059" summary="setup eslintingnore file">
+      <option name="closed" value="true" />
+      <created>1746475816738</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1746475816738</updated>
+    </task>
+    <task id="LOCAL-00060" summary="made changes to eslint.config file">
+      <option name="closed" value="true" />
+      <created>1746476577428</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1746476577429</updated>
+    </task>
+    <task id="LOCAL-00061" summary="made changes to eslint.config file">
+      <option name="closed" value="true" />
+      <created>1746477942549</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1746477942549</updated>
+    </task>
+    <task id="LOCAL-00062" summary="disabled some rules in the eslint.config file">
+      <option name="closed" value="true" />
+      <created>1746478357072</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1746478357072</updated>
+    </task>
+    <task id="LOCAL-00063" summary="disabled eslint during built time.">
+      <option name="closed" value="true" />
+      <created>1746479039381</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1746479039381</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Wrapped my NavSearch with as Suspense">
+      <option name="closed" value="true" />
+      <created>1746479296058</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1746479296058</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Created 404 page">
+      <option name="closed" value="true" />
+      <created>1746479634652</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1746479634652</updated>
+    </task>
+    <task id="LOCAL-00066" summary="updated issues causing site not to build">
+      <option name="closed" value="true" />
+      <created>1746480347095</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1746480347095</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Imported my DynamicNavSearch Component to fix issues with my site building">
+      <option name="closed" value="true" />
+      <created>1746481234135</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1746481234135</updated>
+    </task>
+    <task id="LOCAL-00068" summary="updated my react-day-picker package">
+      <option name="closed" value="true" />
+      <created>1746482325902</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1746482325902</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Fixed issues with my calendar plus disabled dates which are not current">
+      <option name="closed" value="true" />
+      <created>1746483548042</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1746483548042</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,17 +541,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Finished creating the Empty List and Property List Components" />
-    <MESSAGE value="Created format.ts helper function to help with formating of currency" />
-    <MESSAGE value="Finished Creating the property rating component" />
-    <MESSAGE value="Finished Creating the CountryFlagAndName component" />
-    <MESSAGE value="Finished Creating the LoadingCards component" />
-    <MESSAGE value="Finished Creating the search functionality" />
-    <MESSAGE value="Finished Creating the Favorites toggle Button component and Favorites toggle form component" />
-    <MESSAGE value="Created a server action to add properties to my favorites" />
-    <MESSAGE value="Created a server action to fetch favorites properties" />
-    <MESSAGE value="Created the favorites page" />
-    <MESSAGE value="Created the ShareButton Component and BredCrumbs component." />
     <MESSAGE value="Created action to fetch the property details." />
     <MESSAGE value="Setup the Calendar Component and Image Container Component" />
     <MESSAGE value="Setup the Property Details page and Property Details Component" />
@@ -556,7 +555,18 @@
     <MESSAGE value="Fixed issues with Reviews Page" />
     <MESSAGE value="donwgraded my react-day-picker package to make calendar component to work" />
     <MESSAGE value="downgraded my react-day-picker package to make calendar component to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="downgraded my react-day-picker package to make calendar component to work" />
+    <MESSAGE value="updated CategoriesInput component" />
+    <MESSAGE value="setup eslintingnore file" />
+    <MESSAGE value="made changes to eslint.config file" />
+    <MESSAGE value="disabled some rules in the eslint.config file" />
+    <MESSAGE value="disabled eslint during built time." />
+    <MESSAGE value="Wrapped my NavSearch with as Suspense" />
+    <MESSAGE value="Created 404 page" />
+    <MESSAGE value="updated issues causing site not to build" />
+    <MESSAGE value="Imported my DynamicNavSearch Component to fix issues with my site building" />
+    <MESSAGE value="updated my react-day-picker package" />
+    <MESSAGE value="Fixed issues with my calendar plus disabled dates which are not current" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with my calendar plus disabled dates which are not current" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -569,7 +579,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/properties/[id]/page.tsx</url>
-          <line>25</line>
+          <line>19</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

@@ -5,7 +5,7 @@ import FormInput from "@/components/form/FormInput";
 import SubmitButton from "@/components/form/Buttons";
 import PriceInput from "@/components/form/PriceInput";
 import CategoriesInput from "@/components/form/CategoriesInput";
-import TextAreaInput from "@/components/form/TextArea";
+import TextAreaInput from "@/components/form/TextAreaInput";
 import CountriesInput from "@/components/form/CountriesInput";
 import ImageInput from "@/components/form/ImageInput";
 import CounterInput from "@/components/form/CounterInput";

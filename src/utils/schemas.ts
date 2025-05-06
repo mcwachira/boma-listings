@@ -1,5 +1,5 @@
 import * as z from 'zod'
-import {ZodSchema}   from "zod";
+import {ZodSchema} from 'zod'
 
 export const profileSchema = z.object({
     firstName: z.string().min(3, {
@@ -88,3 +88,9 @@ export const propertySchema = z.object({
     }),
     amenities: z.string(),
 });
+
+export const createReviewSchema = z.object({
+    propertyId:z.string(),
+    rating:z.coerce.number().int().min(1).max(5),
+    comment:z.string().min(10).max(1000),
+})

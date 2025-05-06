@@ -2651,7 +2651,7 @@ function PropertyCard({ property }: { property: PropertyCardProps }) {
 export default PropertyCard;
 ```
 
-### Property Rating
+### Property RatingInput
 
 ```tsx
 import { FaStar } from 'react-icons/fa';
@@ -3719,7 +3719,7 @@ npx prisma db push
 
     - Comment.tsx
     - PropertyReviews.tsx
-    - Rating.tsx
+    - RatingInput.tsx
     - SubmitReview.tsx
     - ReviewCard.tsx
 
@@ -3849,7 +3849,7 @@ function SubmitReview({ propertyId }: { propertyId: string }) {
 export default SubmitReview;
 ```
 
-- optional : set rows prop in TextArea.tsx
+- optional : set rows prop in TextAreaInput.tsx
 
 ### Submit Review
 
@@ -3965,7 +3965,7 @@ export default PropertyReviews;
 
 ```tsx
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import Rating from './Rating';
+import RatingInput from './RatingInput';
 import Comment from './Comment';
 type ReviewCardProps = {
   reviewInfo: {
@@ -3991,7 +3991,7 @@ function ReviewCard({ reviewInfo, children }: ReviewCardProps) {
             <h3 className='text-sm font-bold capitalize mb-1'>
               {reviewInfo.name}
             </h3>
-            <Rating rating={reviewInfo.rating} />
+            <RatingInput rating={reviewInfo.rating} />
           </div>
         </div>
       </CardHeader>
@@ -4006,12 +4006,12 @@ function ReviewCard({ reviewInfo, children }: ReviewCardProps) {
 export default ReviewCard;
 ```
 
-### Rating
+### RatingInput
 
 ```tsx
 import { FaStar, FaRegStar } from 'react-icons/fa';
 
-function Rating({ rating }: { rating: number }) {
+function RatingInput({ rating }: { rating: number }) {
   // rating = 2
   // 1 <= 2 true
   // 2 <= 2 true
@@ -4035,7 +4035,7 @@ function Rating({ rating }: { rating: number }) {
   );
 }
 
-export default Rating;
+export default RatingInput;
 ```
 
 ### Comment

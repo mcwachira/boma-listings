@@ -1,6 +1,6 @@
 "use server"
 
-import {imageSchema, profileSchema, propertySchema, validateWithZodSchema} from "@/utils/schemas";
+import {createReviewSchema, imageSchema, profileSchema, propertySchema, validateWithZodSchema} from "@/utils/schemas";
 import {clerkClient, currentUser} from "@clerk/nextjs/server";
 import prisma from "@/lib/prisma";
 import {redirect} from "next/navigation";
@@ -293,4 +293,37 @@ export const fetchPropertyDetails = async (id: string) => {
             profile: true,
         },
     });
+};
+
+export const createReviewAction = async (prevState:any, formData:FormData) => {
+
+    const user = await getAuthUser();
+    try{
+        const rawData = Object.fromEntries(formData);
+        const validatedFields = validateWithZodSchema(createReviewSchema, rawData)
+        await prisma.review.create({
+            data:{
+                ...validatedFields,
+                profileId:user.id
+            },
+        });
+
+    revalidatePath(`/properties/${validatedFields.propertyId}`)
+    return { message: 'Review submitted Successfully' };
+    }catch(error){
+        // console.error(error)
+        return renderError(error)
+    }
+};
+
+export const fetchPropertyReviews = async () => {
+    return { message: 'fetch reviews' };
+};
+
+export const fetchPropertyReviewsByUser = async () => {
+    return { message: 'fetch user reviews' };
+};
+
+export const deleteReviewAction = async () => {
+    return { message: 'delete  reviews' };
 };
