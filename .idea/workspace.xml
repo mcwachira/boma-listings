@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Added a delete button , finished the Review Page and created a loading.tsx for the review page">
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Created fetchPropertyRating action to fetch the ratings of each component and displayed that on the ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,15 +123,7 @@
       <workItem from="1746429044763" duration="1006000" />
       <workItem from="1746430601110" duration="11210000" />
       <workItem from="1746463090804" duration="10656000" />
-      <workItem from="1746552630728" duration="11846000" />
-    </task>
-    <task id="LOCAL-00031" summary="Created format.ts helper function to help with formating of currency">
-      <option name="closed" value="true" />
-      <created>1745783513867</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1745783513867</updated>
+      <workItem from="1746552630728" duration="12892000" />
     </task>
     <task id="LOCAL-00032" summary="Finished Creating the property rating component">
       <option name="closed" value="true" />
@@ -516,7 +509,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746567194015</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Created fetchPropertyRating action to fetch the ratings of each component and displayed that on the ui">
+      <option name="closed" value="true" />
+      <created>1746568002076</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1746568002076</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +536,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Fixed issues with page props in my Property Details Page" />
     <MESSAGE value="Fixed issues with Rental Page" />
     <MESSAGE value="Fixed issues with Reviews Page" />
     <MESSAGE value="donwgraded my react-day-picker package to make calendar component to work" />
@@ -560,7 +560,8 @@
     <MESSAGE value="Created actions to fetch reviews by a user and to delete reviews" />
     <MESSAGE value="fixed my actions to fetch reviews by a user and to delete reviews" />
     <MESSAGE value="Added a delete button , finished the Review Page and created a loading.tsx for the review page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a delete button , finished the Review Page and created a loading.tsx for the review page" />
+    <MESSAGE value="Created fetchPropertyRating action to fetch the ratings of each component and displayed that on the ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created fetchPropertyRating action to fetch the ratings of each component and displayed that on the ui" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

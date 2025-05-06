@@ -1,5 +1,5 @@
 import React from 'react';
-import {fetchPropertyDetails} from "@/actions/action";
+import {fetchPropertyDetails, findExistingReviews} from "@/actions/action";
 import {redirect} from "next/navigation";
 import BreadCrumbs from "@/components/properties/BreadCrumbs";
 import FavoriteToggleButton from '@/components/card/FavoriteToggleButton';
@@ -15,7 +15,7 @@ import Amenities from "@/components/properties/Amenities";
 import DynamicMapComponent from "@/app/properties/[id]/DynamicMapComponent";
 import SubmitReview from "@/components/reviews/SubmitReview";
 import PropertyReviews from '@/components/reviews/PropertyReviews';
-
+import {auth} from '@clerk/nextjs/server';
 
 type Params = Promise<{ id: string }>
 async function PropertyDetailsPage({ params }: { params: Params }) {
@@ -30,6 +30,10 @@ async function PropertyDetailsPage({ params }: { params: Params }) {
 
     const firstName = property.profile.firstName;
     const profileImage = property.profile.profileImage;
+
+    const {userId} = auth();
+    const isNotOwner = property.profile.clerkId !== userId;
+    const reviewDoesNotExist = userId && isNotOwner && !(await findExistingReviews(userId, property.id))
     return (
         <section>
             <BreadCrumbs name={property.name} />
@@ -65,7 +69,7 @@ async function PropertyDetailsPage({ params }: { params: Params }) {
                     <BookingCalendar />
                 </div>
             </section>
-            <SubmitReview propertyId={property.id} />
+            {reviewDoesNotExist && <SubmitReview propertyId={property.id}/>}
             <PropertyReviews propertyId={property.id}/>
         </section>
     );

@@ -399,3 +399,15 @@ export async function fetchPropertyRating(propertyId:string){
     count:result[0]?._count.rating?? 0}
 
 }
+
+export async function findExistingReviews(userId:string, propertyId:sting){
+
+    const reviews = await prisma.review.findFirst({
+        where:{
+            profileId: userId,
+            propertyId: propertyId
+        }
+    })
+
+    return  reviews;
+}
