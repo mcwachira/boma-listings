@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Finished creating the ReviewCard Component, the Rating Component and Comment Component">
-      <change afterPath="$PROJECT_DIR$/src/components/reviews/Comment.tsx" afterDir="false" />
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Added a delete button , finished the Review Page and created a loading.tsx for the review page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/properties/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reviews/Component.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reviews/PropertyReviews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reviews/PropertyReviews.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reviews/Rating.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reviews/Rating.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reviews/ReviewCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reviews/ReviewCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,55 +122,7 @@
       <workItem from="1746429044763" duration="1006000" />
       <workItem from="1746430601110" duration="11210000" />
       <workItem from="1746463090804" duration="10656000" />
-      <workItem from="1746552630728" duration="6229000" />
-    </task>
-    <task id="LOCAL-00025" summary="finished creating the  Components needed for the Rental page and the rental page itself">
-      <option name="closed" value="true" />
-      <created>1745667716047</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1745667716047</updated>
-    </task>
-    <task id="LOCAL-00026" summary="finished creating Create Property action">
-      <option name="closed" value="true" />
-      <created>1745668850480</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1745668850480</updated>
-    </task>
-    <task id="LOCAL-00027" summary="updated Create Property action">
-      <option name="closed" value="true" />
-      <created>1745669055794</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1745669055794</updated>
-    </task>
-    <task id="LOCAL-00028" summary="created action to fetch all my properties">
-      <option name="closed" value="true" />
-      <created>1745773388269</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1745773388269</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Finished creating the Categories List Component">
-      <option name="closed" value="true" />
-      <created>1745774832846</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1745774832846</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Finished creating the Empty List and Property List Components">
-      <option name="closed" value="true" />
-      <created>1745775514500</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1745775514500</updated>
+      <workItem from="1746552630728" duration="11846000" />
     </task>
     <task id="LOCAL-00031" summary="Created format.ts helper function to help with formating of currency">
       <option name="closed" value="true" />
@@ -522,7 +468,55 @@
       <option name="project" value="LOCAL" />
       <updated>1746558829254</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Finished creating the ReviewCard Component, the Rating Component and Comment Component">
+      <option name="closed" value="true" />
+      <created>1746558890412</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1746558890412</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Created actions to fetch reviews by a user and to delte reviews">
+      <option name="closed" value="true" />
+      <created>1746559508294</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1746559508294</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Created actions to fetch reviews by a user and to delte reviews">
+      <option name="closed" value="true" />
+      <created>1746567074661</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1746567074661</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Created actions to fetch reviews by a user and to delete reviews">
+      <option name="closed" value="true" />
+      <created>1746567090882</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1746567090882</updated>
+    </task>
+    <task id="LOCAL-00078" summary="fixed my actions to fetch reviews by a user and to delete reviews">
+      <option name="closed" value="true" />
+      <created>1746567116891</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1746567116891</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Added a delete button , finished the Review Page and created a loading.tsx for the review page">
+      <option name="closed" value="true" />
+      <created>1746567194015</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1746567194015</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,10 +535,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Setup a PropertyMap Component" />
-    <MESSAGE value="Made changes to the build command for deployment" />
-    <MESSAGE value="Made changes to Home page" />
-    <MESSAGE value="Fixed issues with page props" />
     <MESSAGE value="Fixed issues with page props in my Property Details Page" />
     <MESSAGE value="Fixed issues with Rental Page" />
     <MESSAGE value="Fixed issues with Reviews Page" />
@@ -566,7 +556,11 @@
     <MESSAGE value="Updated TextAreaInput Component to enable my  create reveiw action to work" />
     <MESSAGE value="Created a server action to fetch all my comments from the db" />
     <MESSAGE value="Finished creating the ReviewCard Component, the Rating Component and Comment Component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished creating the ReviewCard Component, the Rating Component and Comment Component" />
+    <MESSAGE value="Created actions to fetch reviews by a user and to delte reviews" />
+    <MESSAGE value="Created actions to fetch reviews by a user and to delete reviews" />
+    <MESSAGE value="fixed my actions to fetch reviews by a user and to delete reviews" />
+    <MESSAGE value="Added a delete button , finished the Review Page and created a loading.tsx for the review page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a delete button , finished the Review Page and created a loading.tsx for the review page" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
