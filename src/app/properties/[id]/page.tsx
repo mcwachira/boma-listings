@@ -6,7 +6,6 @@ import FavoriteToggleButton from '@/components/card/FavoriteToggleButton';
 import ShareButton from "@/components/properties/ShareButton";
 import ImageContainer from '@/components/properties/ImageContainer';
 import PropertyRating from "@/components/card/PropertyRating";
-import BookingCalendar from "@/components/properties/BookingCalendar";
 import PropertyDetails from "@/components/properties/PropertyDetails";
 import UserInfo from "@/components/properties/UserInfo";
 import {Separator} from "@/components/ui/separator";
@@ -34,6 +33,8 @@ async function PropertyDetailsPage({ params }: { params: Params }) {
     const {userId} = auth();
     const isNotOwner = property.profile.clerkId !== userId;
     const reviewDoesNotExist = userId && isNotOwner && !(await findExistingReviews(userId, property.id))
+
+   console.log(property.bookings);
     return (
         <section>
             <BreadCrumbs name={property.name} />
@@ -66,7 +67,7 @@ async function PropertyDetailsPage({ params }: { params: Params }) {
 
                 <div className='lg:col-span-4 flex flex-col items-center'>
                     {/* calendar */}
-                    <BookingCalendar />
+                    {/*<BookingCalendar />*/}
                 </div>
             </section>
             {reviewDoesNotExist && <SubmitReview propertyId={property.id}/>}
