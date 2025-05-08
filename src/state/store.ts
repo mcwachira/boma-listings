@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-import {Booking} from './types';
+import {Booking} from '../utils/types';
 import {DateRange} from 'react-day-picker';
 // Define the state's shape
 type PropertyState = {

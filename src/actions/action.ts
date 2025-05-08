@@ -421,8 +421,8 @@ export async function findExistingReviews(userId:string, propertyId:sting){
 
 export const createBookingAction =async(prevState:{
     propertyId:string,
-    checkIn:Date,
-    checkOut:Date
+    checkIn:Date | undefined ,
+    checkOut:Date | undefined
 }) => {
 
 
