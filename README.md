@@ -3354,7 +3354,7 @@ return (
 
 ### Calendar - Initial Setup
 
-- components/properties/booking/BookingCalendar.tsx
+- components/properties/booking/BookingCalendar-old.tsx
 
 ```tsx
 'use client';
@@ -3387,7 +3387,7 @@ export default function App() {
 ```tsx
 <div className='lg:col-span-4 flex flex-col items-center'>
   {/* calendar */}
-  <BookingCalendar />
+  <BookingCalendarOld />
 </div>
 ```
 
@@ -4436,10 +4436,10 @@ export type Booking = {
 
 ### Booking Components
 
-- remove @/components/properties/BookingCalendar.tsx
+- remove @/components/properties/BookingCalendarOld.tsx
 
 - create @/components/booking
-    - BookingCalendar.tsx
+    - BookingCalendar-old.tsx
     - BookingContainer.tsx
     - BookingForm.tsx
     - BookingWrapper.tsx
@@ -4487,7 +4487,7 @@ export const useProperty = create<PropertyState>(() => {
 
 import { useProperty } from '@/utils/store';
 import { Booking } from '@/utils/types';
-import BookingCalendar from './BookingCalendar';
+import BookingCalendarOld from './BookingCalendarOld';
 import BookingContainer from './BookingContainer';
 import { useEffect } from 'react';
 
@@ -4510,7 +4510,7 @@ export default function BookingWrapper({
   }, []);
   return (
     <>
-      <BookingCalendar />
+      <BookingCalendarOld />
       <BookingContainer />
     </>
   );
@@ -4654,7 +4654,7 @@ import {
   generateBlockedPeriods,
 } from '@/utils/calendar';
 
-function BookingCalendar() {
+function BookingCalendarOld() {
   const currentDate = new Date();
 
   const [range, setRange] = useState<DateRange | undefined>(defaultSelected);
@@ -4673,7 +4673,7 @@ function BookingCalendar() {
     />
   );
 }
-export default BookingCalendar;
+export default BookingCalendarOld;
 ```
 
 ### BookingContainer
@@ -4867,10 +4867,10 @@ export const createBookingAction = async (prevState: {
 
 ### Blocked Periods/Dates
 
-BookingCalendar.tsx
+BookingCalendar-old.tsx
 
 ```tsx
-function BookingCalendar() {
+function BookingCalendarOld() {
   const bookings = useProperty((state) => state.bookings);
   const blockedPeriods = generateBlockedPeriods({
     bookings,
@@ -4889,15 +4889,15 @@ function BookingCalendar() {
     />
   );
 }
-export default BookingCalendar;
+export default BookingCalendarOld;
 ```
 
 ### Unavailable Dates
 
-BookingCalendar.tsx
+BookingCalendar-old.tsx
 
 ```tsx
-function BookingCalendar() {
+function BookingCalendarOld() {
   const { toast } = useToast();
   const unavailableDates = generateDisabledDates(blockedPeriods);
 
@@ -4928,7 +4928,7 @@ function BookingCalendar() {
     />
   );
 }
-export default BookingCalendar;
+export default BookingCalendarOld;
 ```
 
 ### Fetch Bookings and Delete Booking
