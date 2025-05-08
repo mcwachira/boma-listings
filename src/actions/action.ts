@@ -6,6 +6,7 @@ import prisma from "@/lib/prisma";
 import {redirect} from "next/navigation";
 import {revalidatePath} from "next/cache";
 import {uploadImage} from "@/utils/supabase";
+import {calculateTotals} from "@/utils/calculateTotals";
 
 
 const getAuthUser = async () => {
@@ -285,18 +286,18 @@ export const fetchFavorites = async() => {
 }
 
 export const fetchPropertyDetails = async (id: string) => {
-    return await prisma.property.findUnique({
+    return  await prisma.property.findUnique({
         where: {
             id,
         },
         include: {
             profile: true,
-            bookings:{
-                select:{
-                    checkIn:true,
-                    checkOut:true,
-                }
-            }
+            bookings: {
+                select: {
+                    checkIn: true,
+                    checkOut: true,
+                },
+            },
         },
     });
 };
@@ -416,4 +417,47 @@ export async function findExistingReviews(userId:string, propertyId:sting){
     })
 
     return  reviews;
+}
+
+export const createBookingAction =async(prevState:{
+    propertyId:string,
+    checkIn:Date,
+    checkOut:Date
+}) => {
+
+
+    const user = await getAuthUser();
+    const {propertyId, checkIn, checkOut} = prevState
+  const property = await prisma.property.findUnique({
+      where:{id:propertyId},
+      select:{price:true}
+  })
+
+    if(!property){
+        return {message: "Property not found"}
+    }
+
+    const {orderTotal , totalNights} = calculateTotals({
+        checkIn,
+        checkOut,
+        price:property.price
+    })
+
+    try{
+        const booking = await prisma.booking.create({
+            data:{
+                checkIn,
+                checkOut,
+                orderTotal,
+                totalNights,
+                profileId:user.id,
+                propertyId
+            }
+        })
+    }catch(error){
+        return renderError(error)
+    }
+
+    redirect("/booking")
+
 }

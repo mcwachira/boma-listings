@@ -4,7 +4,7 @@ import {DateRange} from "react-day-picker"
 import {Calendar} from '../ui/calendar';
 
 
-function BookingCalendar() {
+function BookingCalendarOld() {
     
     const currentDate = new Date();
     const defaultSelected:DateRange = {
@@ -26,4 +26,4 @@ function BookingCalendar() {
     );
 }
 
-export default BookingCalendar;
+export default BookingCalendarOld;

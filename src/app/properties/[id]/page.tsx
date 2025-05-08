@@ -15,6 +15,7 @@ import DynamicMapComponent from "@/app/properties/[id]/DynamicMapComponent";
 import SubmitReview from "@/components/reviews/SubmitReview";
 import PropertyReviews from '@/components/reviews/PropertyReviews';
 import {auth} from '@clerk/nextjs/server';
+import DynamicBookingWrapperComponent from "@/app/properties/[id]/DynamicBookingWrapperComponent";
 
 type Params = Promise<{ id: string }>
 async function PropertyDetailsPage({ params }: { params: Params }) {
@@ -30,11 +31,11 @@ async function PropertyDetailsPage({ params }: { params: Params }) {
     const firstName = property.profile.firstName;
     const profileImage = property.profile.profileImage;
 
-    const {userId} = auth();
+    const {userId} =await auth();
     const isNotOwner = property.profile.clerkId !== userId;
     const reviewDoesNotExist = userId && isNotOwner && !(await findExistingReviews(userId, property.id))
 
-   console.log(property.bookings);
+   // console.log(property.bookings);
     return (
         <section>
             <BreadCrumbs name={property.name} />
@@ -67,7 +68,7 @@ async function PropertyDetailsPage({ params }: { params: Params }) {
 
                 <div className='lg:col-span-4 flex flex-col items-center'>
                     {/* calendar */}
-                    {/*<BookingCalendar />*/}
+                 <DynamicBookingWrapperComponent propertyId={property.id} price={property.price} bookings={property.bookings}/>
                 </div>
             </section>
             {reviewDoesNotExist && <SubmitReview propertyId={property.id}/>}
