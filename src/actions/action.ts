@@ -505,3 +505,26 @@ export const deleteBookingAction = async(prevState:{bookingId:string}) => {
         renderError(error)
     }
 }
+
+
+
+export const deleteRentalAction = async(prevState:{propertyId:string}) => {
+
+    const {propertyId} = prevState;
+    const user=  await getAuthUser();
+    try{
+        await prisma.db.delete({
+            where:{
+                id:propertyId,
+                profileId:user.id,
+            }
+        })
+
+        revalidatePath("/rentals");
+        return {
+            message:"Rental Deleted Successfully",
+        }
+    }catch(error){
+        return renderError(error)
+    }
+}
