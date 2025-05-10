@@ -507,13 +507,56 @@ export const deleteBookingAction = async(prevState:{bookingId:string}) => {
 }
 
 
+export const fetchRentals = async() => {
+    const user = await getAuthUser();
+    const rentals = await prisma.property.findMany({
+        where: {
+            profileId: user.id,
+        },
+        select: {
+            id: true,
+            name: true,
+            price: true,
+        }
+    })
+    const rentalsWithBookings = await Promise.all(
+        rentals.map(async(rental) => {
+            const totalNightSum  = await prisma.booking.aggregate({
+                where:{
+                    propertyId:rental.id
+                },
+                _sum:{
+                    totalNights:true,
+                }
+            })
+
+            const orderTotalSum =  await prisma.booking.aggregate({
+                where:{
+                    propertyId:rental.id
+                },
+                _sum:{
+                    orderTotal:true
+                }
+            })
+
+            return {
+                ...rental,
+                totalNightSum:totalNightSum._sum.totalNights,
+                orderTotalSum:orderTotalSum._sum.orderTotal
+            }
+        })
+    )
+
+    return rentalsWithBookings;
+}
+
 
 export const deleteRentalAction = async(prevState:{propertyId:string}) => {
 
     const {propertyId} = prevState;
     const user=  await getAuthUser();
     try{
-        await prisma.db.delete({
+        await prisma.property.delete({
             where:{
                 id:propertyId,
                 profileId:user.id,
@@ -528,3 +571,5 @@ export const deleteRentalAction = async(prevState:{propertyId:string}) => {
         return renderError(error)
     }
 }
+
+
