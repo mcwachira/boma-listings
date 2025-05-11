@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Created Loading Table Component and loading.tsx to show a loading skeleton when the booking page is loading" />
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Created Loading Table Component and loading.tsx to show a loading skeleton when the booking page is loading">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/rentals/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/rentals/page.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +126,7 @@
       <workItem from="1746552630728" duration="13462000" />
       <workItem from="1746642039019" duration="18117000" />
       <workItem from="1746921516570" duration="2516000" />
-      <workItem from="1747068372618" duration="1818000" />
+      <workItem from="1747068372618" duration="5041000" />
     </task>
     <task id="LOCAL-00045" summary="Setup the Amenities, Descriptions and Title Components">
       <option name="closed" value="true" />
