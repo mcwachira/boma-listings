@@ -5372,7 +5372,12 @@ async function EditRentalPage({ params }: { params: { id: string } }) {
               defaultValue={property.tagline}
             />
             <PriceInput defaultValue={property.price} />
-            <CategoriesInput defaultValue={property.category} />
+           
+          <TextAreaInput
+            name='description'
+            labelText='Description (10 - 100 Words)'
+            defaultValue={property.description}
+          /> <CategoriesInput defaultValue={property.category} />
             <CountriesInput defaultValue={property.country} />
           </div>
 
