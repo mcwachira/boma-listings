@@ -67,9 +67,10 @@ return renderError(error)
 
 //fetch profile image
 export const fetchProfileImage = async() => {
-    const user = await currentUser();
+    // const user = await currentUser();
+
+    const user  = await getAuthUser();
     console.log(user)
-    // const user  = await getAuthUser();
     if(!user) return null ;
     const profile = await prisma.profile.findUnique({
         where:{
@@ -464,7 +465,8 @@ export const createBookingAction =async(prevState:{
 
 export const fetchBookings = async() => {
     const user = await getAuthUser();
-
+    // const user = await currentUser();
+    if(!user) return null ;
     const bookings = await prisma.booking.findMany({
         where:{
             profileId:user.id,
@@ -638,3 +640,30 @@ export const updatePropertyImageAction = async (
         return renderError(error);
     }
 };
+
+export const fetchReservations = async() => {
+    const user  = await getAuthUser()
+    const reservations = await prisma.booking.findMany({
+        where:{
+            property:{
+                profileId: user.id,
+            }
+        },
+        orderBy:{
+            createdAt:"desc"
+        },
+        include:{
+            property:{
+            select:{
+                id:true,
+                name:true,
+                price:true,
+                country:true
+
+            }
+            }
+        }
+    })
+
+    return reservatrions;
+}
