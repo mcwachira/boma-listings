@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Created the server actions for updating the property and updating the property image.">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_5_25,_10_44 PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_5_25__10_44PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/links.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/links.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/reservations/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reservations/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +131,7 @@
       <workItem from="1746642039019" duration="18117000" />
       <workItem from="1746921516570" duration="2516000" />
       <workItem from="1747068372618" duration="8527000" />
-      <workItem from="1747227581765" duration="4232000" />
+      <workItem from="1747227581765" duration="5128000" />
     </task>
     <task id="LOCAL-00049" summary="Made changes to Home page">
       <option name="closed" value="true" />
