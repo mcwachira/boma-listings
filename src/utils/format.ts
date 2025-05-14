@@ -14,11 +14,15 @@ export const formatQuantity = (quantity: number, noun:string) => {
     return quantity === 1 ?     `${quantity} ${noun}` : `${quantity} ${noun}s`;
 }
 
-export const formatDate = (date:Date) => {
-    return new Intl.DateTimeFormat('en-US', {
-        year:"numeric",
-        month:"long",
-        day:"numeric",
+export const formatDate = (date:Date, onlyMonth?:boolean) => {
 
-    }).format(date)
+    const options:Intl.DateTimeFormatOptions ={
+        year: "numeric",
+        month: "long"
+    }
+
+    if(!onlyMonth){
+        options.day = "numeric";
+    }
+    return new Intl.DateTimeFormat('en-US', options).format(date)
 }
