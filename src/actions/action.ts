@@ -79,7 +79,7 @@ export const createProfileAction = async (
 export const fetchProfileImage = async () => {
   // const user = await currentUser();
 
-  const user = await getAuthUser();
+  const user = await currentUser();
   console.log(user);
   if (!user) return null;
   const profile = await prisma.profile.findUnique({
@@ -667,12 +667,12 @@ export const fetchStats = async () => {
 
   const usersCount = await prisma.profile.count();
   const propertiesCount = await prisma.property.count();
-  const bookingCount = await prisma.profile.count();
+  const bookingsCount = await prisma.profile.count();
 
   return {
     usersCount,
     propertiesCount,
-    bookingCount,
+    bookingsCount,
   };
 };
 

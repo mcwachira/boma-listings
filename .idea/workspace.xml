@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Created the server actions for updating the property and updating the property image.">
+    <list default="true" id="99f9a05f-8212-4031-b542-949129ce76f8" name="Changes" comment="Updated the Format Date Function to account for when we need the month only">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reservations/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reservations/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar/LinksDropDown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/LinksDropDown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,26 +41,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "last_opened_file_path": "/home/mcwachira/Documents/GitHub/boma-listings/src/app/reservations",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/home/mcwachira/Documents/GitHub/boma-listings/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mcwachira/Documents/GitHub/boma-listings/src/app/reservations&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/mcwachira/Documents/GitHub/boma-listings/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -133,47 +132,8 @@
       <workItem from="1746642039019" duration="18117000" />
       <workItem from="1746921516570" duration="2516000" />
       <workItem from="1747068372618" duration="8527000" />
-      <workItem from="1747227581765" duration="7035000" />
-    </task>
-    <task id="LOCAL-00049" summary="Made changes to Home page">
-      <option name="closed" value="true" />
-      <created>1746470139864</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1746470139864</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Fixed issues with page props">
-      <option name="closed" value="true" />
-      <created>1746471633258</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1746471633260</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Fixed issues with page props">
-      <option name="closed" value="true" />
-      <created>1746471810536</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1746471810536</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Fixed issues with page props">
-      <option name="closed" value="true" />
-      <created>1746472231044</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1746472231044</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Fixed issues with page props in my Property Details Page">
-      <option name="closed" value="true" />
-      <created>1746472504674</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1746472504674</updated>
+      <workItem from="1747227581765" duration="8770000" />
+      <workItem from="1747257408646" duration="2816000" />
     </task>
     <task id="LOCAL-00054" summary="Fixed issues with Rental Page">
       <option name="closed" value="true" />
@@ -527,7 +487,47 @@
       <option name="project" value="LOCAL" />
       <updated>1747082910989</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="Updated my middleware.ts to account for admin user">
+      <option name="closed" value="true" />
+      <created>1747255658035</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1747255658036</updated>
+    </task>
+    <task id="LOCAL-00099" summary="Created the StartsLoadingContainer and ChartLoadingContainer">
+      <option name="closed" value="true" />
+      <created>1747255875456</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1747255875456</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Finshed Creating the StatsCard and StatsCardContainer Components">
+      <option name="closed" value="true" />
+      <created>1747257185552</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1747257185552</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Finished Creating the StatsCard and StatsCardContainer Components">
+      <option name="closed" value="true" />
+      <created>1747257240512</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1747257240512</updated>
+    </task>
+    <task id="LOCAL-00102" summary="Updated the Format Date Function to account for when we need the month only">
+      <option name="closed" value="true" />
+      <created>1747259295445</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1747259295445</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,11 +546,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Updated TextAreaInput Component to enable my  create reveiw action to work" />
-    <MESSAGE value="Created a server action to fetch all my comments from the db" />
-    <MESSAGE value="Finished creating the ReviewCard Component, the Rating Component and Comment Component" />
-    <MESSAGE value="Created actions to fetch reviews by a user and to delte reviews" />
-    <MESSAGE value="Created actions to fetch reviews by a user and to delete reviews" />
     <MESSAGE value="fixed my actions to fetch reviews by a user and to delete reviews" />
     <MESSAGE value="Added a delete button , finished the Review Page and created a loading.tsx for the review page" />
     <MESSAGE value="Created fetchPropertyRating action to fetch the ratings of each component and displayed that on the ui" />
@@ -571,7 +566,12 @@
     <MESSAGE value="Created the edit rental page" />
     <MESSAGE value="Created the edit rental page and Updated the amenities input so that I can show icons in the edit rental page" />
     <MESSAGE value="Created the server actions for updating the property and updating the property image." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created the server actions for updating the property and updating the property image." />
+    <MESSAGE value="Updated my middleware.ts to account for admin user" />
+    <MESSAGE value="Created the StartsLoadingContainer and ChartLoadingContainer" />
+    <MESSAGE value="Finshed Creating the StatsCard and StatsCardContainer Components" />
+    <MESSAGE value="Finished Creating the StatsCard and StatsCardContainer Components" />
+    <MESSAGE value="Updated the Format Date Function to account for when we need the month only" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the Format Date Function to account for when we need the month only" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
