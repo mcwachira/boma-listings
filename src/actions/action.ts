@@ -431,6 +431,14 @@ export const createBookingAction = async (prevState: {
 }) => {
   const user = await getAuthUser();
 
+  //delete bookinsg where the payment status is false
+  await prisma.booking.deleteMany({
+    where: {
+      profileId: user.id,
+      paymentStatus: false,
+    },
+  });
+
   let bookingId: null | string = null;
   const { propertyId, checkIn, checkOut } = prevState;
   const property = await prisma.property.findUnique({
@@ -475,6 +483,7 @@ export const fetchBookings = async () => {
   const bookings = await prisma.booking.findMany({
     where: {
       profileId: user.id,
+      paymentStatus: true,
     },
     include: {
       property: {
@@ -529,6 +538,7 @@ export const fetchRentals = async () => {
       const totalNightSum = await prisma.booking.aggregate({
         where: {
           propertyId: rental.id,
+          paymentStatus: true,
         },
         _sum: {
           totalNights: true,
@@ -538,6 +548,7 @@ export const fetchRentals = async () => {
       const orderTotalSum = await prisma.booking.aggregate({
         where: {
           propertyId: rental.id,
+          paymentStatus: true,
         },
         _sum: {
           orderTotal: true,
@@ -644,6 +655,7 @@ export const fetchReservations = async () => {
   const user = await getAuthUser();
   const reservations = await prisma.booking.findMany({
     where: {
+      paymentStatus: true,
       property: {
         profileId: user.id,
       },
@@ -671,7 +683,11 @@ export const fetchStats = async () => {
 
   const usersCount = await prisma.profile.count();
   const propertiesCount = await prisma.property.count();
-  const bookingsCount = await prisma.profile.count();
+  const bookingsCount = await prisma.booking.count({
+    where: {
+      paymentStatus: true,
+    },
+  });
 
   return {
     usersCount,
@@ -688,6 +704,7 @@ export const fetchChartsData = async () => {
 
   const bookings = await prisma.booking.findMany({
     where: {
+      paymentStatus: true,
       createdAt: {
         gte: sixMonthsAgo,
       },
