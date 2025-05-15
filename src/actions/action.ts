@@ -730,3 +730,31 @@ export const fetchChartsData = async () => {
   );
   return bookingsPerMonth;
 };
+
+export const fetchReservationStats = async () => {
+  const user = await getAuthUser();
+  const properties = await prisma.property.count({
+    where: {
+      profileId: user.id,
+    },
+  });
+
+  const totals = await prisma.booking.aggregate({
+    _sum: {
+      orderTotal: true,
+      totalNights: true,
+    },
+
+    where: {
+      property: {
+        profileId: user.id,
+      },
+    },
+  });
+
+  return {
+    properties,
+    nights: totals._sum.totalNights || 0,
+    amount: totals._sum.orderTotal || 0,
+  };
+};
