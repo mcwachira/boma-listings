@@ -42,7 +42,7 @@ function Chart({ data }: ChartPropsType) {
           />
           <ChartTooltip content={<ChartTooltipContent />} />
           <ChartLegend content={<ChartLegendContent />} />
-          <Bar dataKey="count" fill="var(--color-desktop)" radius={10} />
+          <Bar dataKey="count" fill="var(--desktop)" radius={10} />
         </BarChart>
       </ChartContainer>
     </section>

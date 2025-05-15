@@ -426,10 +426,12 @@ export async function findExistingReviews(userId: string, propertyId: sting) {
 
 export const createBookingAction = async (prevState: {
   propertyId: string;
-  checkIn: Date | undefined;
-  checkOut: Date | undefined;
+  checkIn: Date;
+  checkOut: Date;
 }) => {
   const user = await getAuthUser();
+
+  let bookingId: null | string = null;
   const { propertyId, checkIn, checkOut } = prevState;
   const property = await prisma.property.findUnique({
     where: { id: propertyId },
@@ -457,11 +459,13 @@ export const createBookingAction = async (prevState: {
         propertyId,
       },
     });
+
+    bookingId = booking.id;
   } catch (error) {
     return renderError(error);
   }
 
-  redirect("/bookings");
+  redirect(`/checkout?bookingId=${bookingId}`);
 };
 
 export const fetchBookings = async () => {

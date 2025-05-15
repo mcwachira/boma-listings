@@ -1,6 +1,6 @@
-import { fetchChartsData } from "@/actions/action";
 import React from "react";
 import Chart from "./Chart";
+import { fetchChartsData } from "@/actions/action";
 
 async function ChartsContainer() {
   const bookings = await fetchChartsData();
