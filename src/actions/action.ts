@@ -33,8 +33,6 @@ const getAdminUser = async () => {
   return user;
 };
 const renderError = (error: unknown): { message: string } => {
-  console.log(error);
-
   return {
     message: error instanceof Error ? error.message : "An error occurred",
   };
@@ -61,7 +59,7 @@ export const createProfileAction = async (
         ...validatedFields,
       },
     });
-    console.log(users);
+
     const clerk = await clerkClient();
     await clerk.users.updateUserMetadata(user.id, {
       privateMetadata: {
@@ -80,7 +78,7 @@ export const fetchProfileImage = async () => {
   // const user = await currentUser();
 
   const user = await currentUser();
-  console.log(user);
+
   if (!user) return null;
   const profile = await prisma.profile.findUnique({
     where: {
